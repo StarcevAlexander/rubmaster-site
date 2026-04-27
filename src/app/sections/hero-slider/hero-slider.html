@@ -1,0 +1,64 @@
+<section class="hero">
+
+  <!-- Слайдер фото -->
+  <div class="swiper hero__swiper" #swiperEl>
+    <div class="swiper-wrapper">
+      @for (slide of slides; track $index) {
+        <div class="swiper-slide hero__slide">
+          <img
+            [src]="slide"
+            alt="РубМастер — производство рубильных машин"
+            class="hero__slide-img"
+            [attr.loading]="$first ? 'eager' : 'lazy'"
+            [attr.fetchpriority]="$first ? 'high' : null">
+          <div class="hero__slide-overlay"></div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Контент поверх слайдера -->
+  <div class="hero__content">
+    <div class="container">
+      <div class="hero__card">
+
+        <div class="hero__text">
+          <span class="hero__label">Производство рубильных машин и измельчителей</span>
+          <h1 class="hero__title">
+            <!-- Текст будет заменён -->
+            Надёжная техника<br>
+            <em>для вашего бизнеса</em>
+          </h1>
+          <p class="hero__desc">
+            <!-- Описание будет заменено -->
+            Собственное производство полного цикла. Более 200 машин
+            работают в регионах России. 15 лет профессионального опыта.
+          </p>
+        </div>
+
+        <div class="hero__actions">
+          <a href="https://promservis33.ru/catalog" target="_blank" rel="noopener" class="btn btn--primary">
+            <span>Продукция</span>
+          </a>
+          <a href="https://promservis33.ru/contacts" target="_blank" rel="noopener" class="btn btn--secondary-white">
+            <span>Техподдержка</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Стрелки навигации -->
+  <button class="hero__prev" (click)="prev()" aria-label="Предыдущий слайд">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button class="hero__next" (click)="next()" aria-label="Следующий слайд">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+</section>

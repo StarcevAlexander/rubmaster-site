@@ -1,0 +1,56 @@
+.header {
+  background: var(--dark);
+  padding: 0;
+  position: relative;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    @media (max-width: 768px) {
+      height: 64px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  &__logo-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  &__logo-text {
+    font-family: 'CannonadeBold', var(--font), sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &__logo-rub {
+    color: var(--red);
+  }
+
+  &__logo-master {
+    color: #fff;
+  }
+}
